@@ -40,6 +40,11 @@
     border-width: 0;
 }
 
+.search-bar .unity-text-field__placeholder > .unity-base-text-field__input {
+    color: rgb(161, 161, 161);
+    -unity-font-style: normal;
+}
+
 .model-list {
     max-height: none;
     min-height: auto;

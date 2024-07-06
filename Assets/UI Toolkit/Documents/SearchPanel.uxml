@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Stylesheets/SearchPanelStyle.uss?fileID=7433441132597879392&amp;guid=024d7e96c454c154b9155ec58e75bc91&amp;type=3#SearchPanelStyle" />
     <ui:VisualElement name="SearchPanel" class="search-panel">
-        <ui:TextField picking-mode="Ignore" value="Search ..." password="false" readonly="false" name="SearchBar" class="search-bar" />
+        <ui:TextField name="SearchBar" class="search-bar" />
         <ui:ListView name="ModelList" class="model-list" />
     </ui:VisualElement>
 </ui:UXML>

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,7 +5,7 @@ public class SearchPanelUI : MonoBehaviour
 {
     [SerializeField] private UIDocument _uiDocument;
 
-    private TextField _searchBarTextInput;
+    private TextField _searchBarText;
     private ListView _modelListView;
 
     void Awake()
@@ -25,13 +24,15 @@ public class SearchPanelUI : MonoBehaviour
 
     private void InitializeVariablesFromRoot(VisualElement root)
     {
-        _searchBarTextInput = root.Q<TextField>("SearchBar");
+        _searchBarText = root.Q<TextField>("SearchBar");
+        _searchBarText.SetPlaceholderText("Search...");
+
         _modelListView = root.Q<ListView>("ModelList");
     }
 
     private void HookIntoEvents()
     {
-        _searchBarTextInput.RegisterValueChangedCallback(OnSearchBarTextInputChanged);
+        _searchBarText.RegisterValueChangedCallback(OnSearchBarTextInputChanged);
 
         // TODO: implement the listview
         // _modelListView.DoSomething()
